@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" && cd "$dir"
+project_root="$(cd ${dir}; cd ../..; pwd)" && cd "$project_root"
+#src_dir="$(cd src; pwd)" && cd "$src_dir"
+
+FLASK_APP='src/server.py' FLASK_ENV='development' python3 -m flask run
